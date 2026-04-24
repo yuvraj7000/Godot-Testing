@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bum58bkd6mcbp"]
+
+[ext_resource type="Script" uid="uid://cyk00wykkf8cb" path="res://scripts/game/fire.gd" id="1_ixfp5"]
+[ext_resource type="Texture2D" uid="uid://c5bxk3dg27naq" path="res://assets/bomb.png" id="2_vageu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mcvc2"]
+radius = 79.0
+height = 514.0
+
+[node name="fire" type="CharacterBody2D" unique_id=1402837952]
+script = ExtResource("1_ixfp5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1086232888]
+position = Vector2(13, 41)
+rotation = -3.1415925
+texture = ExtResource("2_vageu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1511557898]
+scale = Vector2(0.2, 0.2)
+shape = SubResource("CapsuleShape2D_mcvc2")

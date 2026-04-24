@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://v6a7yo0e7yeb"]
+
+[ext_resource type="Texture2D" uid="uid://dghj2x80khjb1" path="res://assets/background.png" id="1_fd8p2"]
+
+[node name="background" type="Node2D" unique_id=1564301906]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1051659833]
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D" unique_id=1622995108]
+position = Vector2(9.359131, -11.882874)
+rotation = 1.5707964
+scale = Vector2(0.41805193, 0.51741785)
+texture = ExtResource("1_fd8p2")

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c5rdnyb1tavx6"]
+
+[ext_resource type="PackedScene" uid="uid://v6a7yo0e7yeb" path="res://scenes/game/background.tscn" id="1_sul5r"]
+[ext_resource type="PackedScene" uid="uid://8mg5yly58ia2" path="res://scenes/game/grass.tscn" id="2_7h61r"]
+[ext_resource type="PackedScene" uid="uid://bji36jv3f177v" path="res://scenes/game/player.tscn" id="3_0sr1o"]
+[ext_resource type="PackedScene" uid="uid://ykcrnwym0qoj" path="res://scenes/game/stone.tscn" id="3_kelw5"]
+[ext_resource type="PackedScene" uid="uid://dj0h6223mq12p" path="res://scenes/ui/button.tscn" id="5_lfrn8"]
+
+[node name="game" type="Node2D" unique_id=1620622096]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1995162467]
+position = Vector2(650, 339)
+
+[node name="background" parent="Camera2D" unique_id=1564301906 instance=ExtResource("1_sul5r")]
+position = Vector2(-9, 21)
+
+[node name="grass" parent="Camera2D" unique_id=245690566 instance=ExtResource("2_7h61r")]
+position = Vector2(145, -118)
+rotation = -0.050614547
+scale = Vector2(0.1, 0.1)
+skew = -0.012217305
+
+[node name="stone" parent="Camera2D" unique_id=1792485304 instance=ExtResource("3_kelw5")]
+position = Vector2(-328, -19)
+scale = Vector2(0.5, 0.5)
+
+[node name="player" parent="Camera2D" unique_id=1253477884 instance=ExtResource("3_0sr1o")]
+position = Vector2(-298, -80)
+scale = Vector2(0.2, 0.2)
+floor_constant_speed = true
+
+[node name="Button" parent="Camera2D" unique_id=1719000915 instance=ExtResource("5_lfrn8")]
+
+[connection signal="button_up" from="Camera2D/Button" to="Camera2D/player" method="_on_button_button_up"]

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ykcrnwym0qoj"]
+
+[ext_resource type="Texture2D" uid="uid://clibi46kub5ff" path="res://assets/stone.png" id="1_6162y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h118k"]
+radius = 55.00909
+
+[node name="stone" type="StaticBody2D" unique_id=1087844798]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1308019693]
+position = Vector2(405.00006, 160)
+scale = Vector2(0.6472222, 0.6333333)
+texture = ExtResource("1_6162y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1175206454]
+position = Vector2(407, 160)
+shape = SubResource("CircleShape2D_h118k")

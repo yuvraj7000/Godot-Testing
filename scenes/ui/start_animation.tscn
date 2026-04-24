@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bc12fxaqbw16p"]
+
+[ext_resource type="Script" uid="uid://co4mil12mln2t" path="res://scripts/ui/menu_button.gd" id="2_j4ipj"]
+
+[sub_resource type="Theme" id="Theme_ecn7a"]
+
+[node name="start_animation" type="Control" unique_id=1009816920]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5215.0
+offset_top = 351.0
+offset_right = 5215.0
+offset_bottom = 376.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=394992034]
+position = Vector2(576, 338)
+
+[node name="MenuButton" type="MenuButton" parent="." unique_id=1081751947]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 307.0
+offset_right = 693.0
+offset_bottom = 373.0
+theme = SubResource("Theme_ecn7a")
+text = "Start The Game"
+script = ExtResource("2_j4ipj")
+
+[connection signal="toggled" from="MenuButton" to="MenuButton" method="_on_toggled"]

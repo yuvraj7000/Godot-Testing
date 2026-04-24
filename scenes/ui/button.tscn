@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dj0h6223mq12p"]
+
+[ext_resource type="Script" uid="uid://bduxher1upr33" path="res://scripts/ui/button.gd" id="1_di1ux"]
+
+[node name="Button" type="Button" unique_id=1719000915]
+offset_left = 346.0
+offset_top = 102.0
+offset_right = 454.0
+offset_bottom = 181.0
+text = "Click Here"
+script = ExtResource("1_di1ux")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
