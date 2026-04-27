@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://ee0w6mybwhdr"]
+
+[ext_resource type="Texture2D" uid="uid://b6wgqqy7h3dn2" path="res://assets/tank_blast.png" id="1_fmfeu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqjt3"]
+atlas = ExtResource("1_fmfeu")
+region = Rect2(0, 0, 163, 183)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnscy"]
+atlas = ExtResource("1_fmfeu")
+region = Rect2(163, 0, 163, 183)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7haed"]
+atlas = ExtResource("1_fmfeu")
+region = Rect2(326, 0, 163, 183)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02ocd"]
+atlas = ExtResource("1_fmfeu")
+region = Rect2(489, 0, 163, 183)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kudo6"]
+atlas = ExtResource("1_fmfeu")
+region = Rect2(0, 183, 163, 183)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpwuk"]
+atlas = ExtResource("1_fmfeu")
+region = Rect2(163, 183, 163, 183)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxdmn"]
+atlas = ExtResource("1_fmfeu")
+region = Rect2(326, 183, 163, 183)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcdo1"]
+atlas = ExtResource("1_fmfeu")
+region = Rect2(489, 183, 163, 183)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ni1oq"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqjt3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnscy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7haed")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02ocd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kudo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpwuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxdmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcdo1")
+}],
+"loop": false,
+"name": &"tank",
+"speed": 15.0
+}]
+
+[node name="blast" type="Node2D" unique_id=622244382]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=214981371]
+sprite_frames = SubResource("SpriteFrames_ni1oq")
+animation = &"tank"

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://8mg5yly58ia2"]
 
 [ext_resource type="Texture2D" uid="uid://c75t0rs851lki" path="res://assets/grass.png" id="1_kcrmk"]
+[ext_resource type="Script" uid="uid://beall2qkdoshe" path="res://scripts/game/grass_collision.gd" id="2_rtfam"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rtfam"]
 radius = 207.03865
@@ -14,3 +15,4 @@ texture = ExtResource("1_kcrmk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1783654207]
 position = Vector2(-173, 64)
 shape = SubResource("CircleShape2D_rtfam")
+script = ExtResource("2_rtfam")

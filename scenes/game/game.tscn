@@ -31,4 +31,9 @@ floor_constant_speed = true
 
 [node name="Button" parent="Camera2D" unique_id=1719000915 instance=ExtResource("5_lfrn8")]
 
+[node name="player2" parent="Camera2D" unique_id=224856169 instance=ExtResource("3_0sr1o")]
+position = Vector2(114.99994, 122.999985)
+scale = Vector2(0.2, 0.2)
+floor_constant_speed = true
+
 [connection signal="button_up" from="Camera2D/Button" to="Camera2D/player" method="_on_button_button_up"]
