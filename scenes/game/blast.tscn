@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://ee0w6mybwhdr"]
+[gd_scene format=3 uid="uid://bao3cbw1k8c1r"]
 
 [ext_resource type="Texture2D" uid="uid://b6wgqqy7h3dn2" path="res://assets/tank_blast.png" id="1_fmfeu"]
+[ext_resource type="Script" uid="uid://ugqsg21ua25h" path="res://scripts/game/blast.gd" id="2_uqjt3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uqjt3"]
 atlas = ExtResource("1_fmfeu")
@@ -68,11 +69,12 @@ animations = [{
 }],
 "loop": false,
 "name": &"tank",
-"speed": 15.0
+"speed": 24.0
 }]
 
-[node name="blast" type="Node2D" unique_id=622244382]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=214981371]
+[node name="blast" type="AnimatedSprite2D" unique_id=324002133]
 sprite_frames = SubResource("SpriteFrames_ni1oq")
 animation = &"tank"
+script = ExtResource("2_uqjt3")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
